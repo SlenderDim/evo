@@ -1,0 +1,80 @@
+.footer {
+    height: 38rem;
+    padding-top: 17rem;
+
+    background: url('../img/under_footer.svg') 50% 25% no-repeat;
+    background-size: 90%;
+
+    @include breakpoint($middle) {
+        padding-top: 5rem;
+    }
+}
+
+.footer__inner {
+    max-width: 93.5rem;
+    margin: 0 auto ;
+    padding: 0 4rem;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    @include breakpoint($middle) {
+        flex-direction: column;
+    }
+}
+
+.footer__social {
+    max-width: 18rem;
+}
+
+.footer__phone {
+    max-width: 17.5rem;
+}
+
+.footer__about {
+    max-width: 20rem;
+}
+
+.footer__social,
+.footer__about,
+.footer__phone {
+    margin-bottom: 2rem;
+}
+
+.footer__title {
+    margin-bottom: 1rem;
+
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.footer__text {
+    font-weight: 300;
+    font-size: 14px;
+
+    &.city {
+        margin-top: 1rem;
+    }
+}
+
+.footer__num {
+    font-weight: 300;
+    font-size: 14px;
+
+    &.first {
+        margin-bottom: 1rem;
+    }
+
+
+    & a {
+        color: $black;
+        line-height: 1rem;
+
+        transition: all .2 ease-in-out;
+
+        &:hover {
+            color: #D4145A;
+        }
+    }
+}

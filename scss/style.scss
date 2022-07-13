@@ -1,0 +1,55 @@
+@import "_reset.scss";
+@import "_vars.scss";
+@import '_mixins.scss';
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $white;
+    font-size: 1.4rem;
+    color: $black;
+    font-family: 'Roboto', sans-serif;
+
+    @include breakpoint($middle) {
+        background: url("../img/undercut.svg") 103% 9% no-repeat;
+        background-size: 200%;
+    }
+
+    &.fixed {
+        top: 0; 
+        left: 0; 
+        overflow: hidden;
+    }
+}
+
+.page {
+    overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 126.7rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+@import '_head.scss';
+@import '_nav.scss';
+@import '_intro.scss';
+@import '_what.scss';
+@import '_comment.scss';
+@import '_footer.scss';
+@import '_order.scss';

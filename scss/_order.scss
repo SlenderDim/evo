@@ -1,0 +1,240 @@
+.order {
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+
+    display: none;
+    align-items: center;
+
+    padding: 0 1rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    
+    backdrop-filter: blur(20px);
+
+    &.show {
+        display: flex;
+    }
+}
+
+.order__window {
+    position: relative;
+    height: 39.2rem;
+    width: 118rem;
+
+    margin: 0 auto;
+    padding: 4.5rem 0 7rem;
+    position: relative;
+    margin: 0 auto;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #fff url('../img/undercut__order1.svg') 50% 50% no-repeat;
+    background-size: 106%;
+    border-radius: 16px;
+    box-shadow: 0px 0px 35px rgba(212, 20, 90, 0.25);
+
+    @include breakpoint($tabletBigBp) {
+        height: 40.1rem;
+        width: 63.5rem;
+        padding: 5rem 1rem 4rem;
+
+        background: #fff;
+    }
+
+    @include breakpoint($mobilBp) {
+        height: 29.8rem;
+        width: 26.7rem;
+        padding: 2.8rem 1rem;
+    }
+}
+
+.order__title {
+    margin-bottom: 3.2rem;
+
+    font-weight: 500;
+    font-size: 2.4rem;
+    text-align: center;
+
+    @include breakpoint($tabletBigBp) {
+        margin-bottom: 1.8rem;
+    }
+
+    @include breakpoint($mobilBp) {
+        font-size: 1.5rem;
+    }
+}
+
+.form {
+    max-width: 75rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint($tabletBigBp) {
+        max-width: 43.2rem;
+    }
+}
+
+.form__input {
+    width: 36.2rem;
+    height: 5rem;
+    padding-left: 2.1rem;
+
+    border: 1px solid #A2A2A2;
+    border-radius: 9px;
+
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+
+
+    font-weight: 300;
+    font-size: 1.4rem;
+
+    color: #989898;
+
+    @include breakpoint($tabletBigBp) {
+        width: 43.2rem;
+        height: 4.1rem;
+
+        margin-bottom: 1.8rem;
+    }
+
+    @include breakpoint($mobilBp) {
+        height: 2rem;
+        width: 21.2rem;
+        margin: 0 auto 1.8rem;
+
+        font-size: 1rem;
+    }
+
+    &::placeholder {
+        font-weight: 300;
+        font-size: 1.4rem;
+
+        color: #989898;
+
+        @include breakpoint($mobilBp) {
+            font-size: 1rem;
+        }
+    }
+
+    &:focus::placeholder {
+        opacity: 0;    
+        transition: opacity .2s ease-in-out;
+    }
+
+    &:first-child {
+        margin-right: 2.5rem;
+
+        @include breakpoint($tabletBigBp) {
+            margin-right: 0;
+        }
+
+        @include breakpoint($mobilBp) {
+            margin: 0 auto 1.8rem;
+        }
+    }
+    &.message {
+        width: 100%;
+        height: 8.1rem;
+        margin-top: 1.7rem;
+        padding-bottom: 5rem;
+        padding-top: 1rem;
+
+        font-family: 'Roboto', serif;
+        font-weight: 300;
+        font-size: 1.4rem;
+
+        resize: none;
+        overflow: hidden;
+
+        @include breakpoint($tabletBigBp) {
+            height: 9.1rem;
+
+            margin-top: 0;
+            margin-bottom: 2.1rem;
+        }
+
+        @include breakpoint($mobilBp) {
+            width: 21.2rem;
+        }
+    }
+}
+
+.form__btn {
+    margin: 4.2rem auto 0;
+    padding: 1.4rem 3.77rem 1.7rem;
+
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(96.12deg, #D4145A -21.03%, #3D5BF5 103.56%);
+
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1;
+    color: #FFFFFF;
+
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 10px 10px 30px rgba(212, 20, 90, .25);
+    }
+
+    @include breakpoint($tabletBigBp) {
+        margin-top: 0;
+        padding: 1.2rem 2rem 1.2rem;
+    }
+
+    @include breakpoint($mobilBp) {
+        width: 5.8rem;
+
+        font-size: 0.9rem;
+        padding: .5rem 0 .6rem;
+    }
+}
+
+.close__btn {
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 2rem;
+    top: 2.5rem;
+
+    font-size: 0;
+    color: transparent;
+
+    cursor: pointer;
+}
+
+.close__btn::after,
+.close__btn::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 13px;
+    border-radius: 5px;
+
+    background-color: #000;
+    position: absolute;
+
+    transition: transform .2s ease;
+}
+
+.close__btn::after {
+    transform: rotate(45deg);
+}
+
+.close__btn::before {
+    transform: rotate(-45deg);
+}

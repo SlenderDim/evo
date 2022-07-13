@@ -1,0 +1,134 @@
+.what {
+    margin-top: 3rem;
+    padding-bottom: 22.5rem;
+    background: url('../img/undercut_what.svg') 0 75% no-repeat;
+    background-size: 50%;
+
+    @include breakpoint($tabletBigBp) {
+        padding-bottom: 12.5rem;
+        background: url('../img/undercut_what.svg') -1% 27% no-repeat;
+        background-size: 29%;
+    }
+
+    @include breakpoint($middle) {
+        margin-top: 5rem;
+    }
+}
+
+.what__inner {
+    margin: 0 auto;
+    max-width: 118.4rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.what__title {
+    display: flex;
+    margin: 0 auto 12rem;
+
+    font-size: 5rem;
+    font-weight: 400;
+
+    & span {
+        background: linear-gradient(180deg, #B90160 0%, #3D5BF5 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    @include breakpoint($tabletBigBp) {
+        margin-bottom: 8rem;
+        font-size: 4rem;
+    }
+
+    @include breakpoint($middle) {
+        margin-bottom: 6rem;
+        font-size: 2rem;
+    }
+}
+
+.what__cards {
+    padding: 0 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint($tabletBigBp) {
+        flex-wrap: wrap;
+    }
+}
+
+.what__card {
+    width: 34.5rem;
+    margin-right: 1rem;
+
+    border-radius: 9px;
+    box-shadow: 0px 0px 40px rgba(184, 0, 95, 0.2);
+    background: $white;
+
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 5px 5px 35px rgba(184, 0, 95, 0.2);
+    }
+
+    @include breakpoint($tabletBigBp) {
+        width: 59.4rem;
+        margin: 0 auto 6.1rem;
+    }
+
+    @include breakpoint($middle) {
+        // width: 26.4rem;
+    }
+}
+
+.card__title {
+    margin: 0 2rem 2rem;
+
+    font-weight: 700;
+    font-size: 3.6rem;
+
+    @include breakpoint($middle) {
+        font-size: 3rem;
+    }
+}
+
+
+.card__img {
+    top: 0;
+    right: 0;
+    height: 21rem;
+    margin-bottom: 3rem;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 9px 9px 0 0;
+
+    &.first {
+        background-image: url('../img/img1.jpg');
+    }
+
+    &.second {
+        background-image: url('../img/img2.jpg');
+    }
+
+    &.third {
+        background-image: url('../img/img3.jpg');
+    }
+
+    @include breakpoint($middle) {
+        // height: 15rem;
+    }
+}
+
+.card__text {
+    margin: 0 2rem 2rem;
+
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: #767676;
+}
